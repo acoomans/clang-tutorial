@@ -7,7 +7,8 @@ OBJ = lexer.cpp parser.cpp driver.cpp
 all: $(BUILD)
 	
 $(BUILD): $(OBJ)
-	$(CPP) $(CPPFLAGS) -o $@ $^
+	mkdir -p build
+	$(CPP) $(CPPFLAGS) -o build/$@ $^
 	
 .PHONY: clean
 
